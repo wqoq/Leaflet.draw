@@ -39,7 +39,8 @@
     "build": "jake build -f ./Jakefile.js",
     "test": "jake test",
     "docs": "jake docs",
-    "release": "./build/publish.sh"
+    "release": "./build/publish.sh",
+    "prepublish": "build"
   },
   "repository": {
     "type": "git",
