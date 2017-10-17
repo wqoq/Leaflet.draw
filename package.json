@@ -1,5 +1,5 @@
 {
-  "name": "@wqoq/leaflet-draw",
+  "name": "leaflet-draw",
   "version": "0.4.12",
   "description": "Vector drawing plugin for Leaflet",
   "devDependencies": {
