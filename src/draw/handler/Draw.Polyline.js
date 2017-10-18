@@ -499,7 +499,7 @@ L.Draw.Polyline = L.Draw.Feature.extend({
 		var markersLength = this._markers.length,
 			previousMarkerIndex, distance;
 
-		if (this._markers.length === 1) {
+		if (this._markers.length <= 1) {
 			this._measurementRunningTotal = 0;
 		} else {
 			previousMarkerIndex = markersLength - (added ? 2 : 1);
