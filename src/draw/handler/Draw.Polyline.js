@@ -499,9 +499,7 @@ L.Draw.Polyline = L.Draw.Feature.extend({
 		var markersLength = this._markers.length,
 			previousMarkerIndex, distance;
 
-		if (this._markers.length <= 1) {
-			this._measurementRunningTotal = 0;
-		} else {
+		if (this._markers.length > 1) {
 			previousMarkerIndex = markersLength - (added ? 2 : 1);
 
 			// Calculate the distance based on the version
@@ -512,6 +510,8 @@ L.Draw.Polyline = L.Draw.Feature.extend({
 			}
 
 			this._measurementRunningTotal += distance * (added ? 1 : -1);
+		} else {
+			this._measurementRunningTotal = 0;
 		}
 	},
 
